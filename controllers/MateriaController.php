@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__ . "../config/database.php";
-require_once __DIR__ . "../models/Materia.php";
+require_once __DIR__ . "/../config/database.php";
+require_once __DIR__ . "/../models/Materia.php";
     class MateriaController {
         private $materiaModel;
 
@@ -10,12 +10,12 @@ require_once __DIR__ . "../models/Materia.php";
         }
 
         public function index() {
-            $usuarios = $this->materiaModel->getAll();
-            require __DIR__ . "../views/users/index.php";
+            $materias = $this->materiaModel->getAll();
+            require __DIR__ . "/../views/index.php";
         }
 
         public function create() {
-            require __DIR__ . "../views/users/create.php";
+            require __DIR__ . "/../views/create.php";
         }
 
         public function edit() {
@@ -24,9 +24,9 @@ require_once __DIR__ . "../models/Materia.php";
 
             $usuario = $this->materiaModel->getById($id);
             if(!$usuario) die("No se encontro un usuario con la ID " . $id);
-            require __DIR__ . "./views/users/edit.php";
+            require __DIR__ . "/../views/edit.php";
         }
-        
+
         public function store() {
             $nombre = trim($_POST["nombre"] ?? "");
             $anio = isset($_POST["anio"]) ? (int)$_POST["anio"] : 0;

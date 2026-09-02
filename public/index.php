@@ -1,5 +1,5 @@
 <?php
-    require_once __DIR__ . "../controllers/MateriaController.php";
+    require_once __DIR__ . "/../controllers/MateriaController.php";
     $controller = new MateriaController();
     $action = $_GET["action"] ?? "index";
 
