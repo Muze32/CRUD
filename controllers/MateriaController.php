@@ -18,15 +18,6 @@ require_once __DIR__ . "/../models/Materia.php";
             require __DIR__ . "/../views/create.php";
         }
 
-        public function edit() {
-            $id = isset($_POST["id"]) ? (int)$_POST["id"] : 0;
-            if($id <= 0) die("Ingrese un ID valido");
-
-            $usuario = $this->materiaModel->getById($id);
-            if(!$usuario) die("No se encontro un usuario con la ID " . $id);
-            require __DIR__ . "/../views/edit.php";
-        }
-
         public function store() {
             $nombre = trim($_POST["nombre"] ?? "");
             $anio = isset($_POST["anio"]) ? (int)$_POST["anio"] : 0;
@@ -41,9 +32,17 @@ require_once __DIR__ . "/../models/Materia.php";
             header("Location: index.php?action=index");
             exit;
         }
+        public function edit() {
+            $id = isset($_GET["materia_id"]) ? (int)$_GET["materia_id"] : 0;
+            if($id <= 0) die("Ingrese un ID valido");
+
+            $materia = $this->materiaModel->getById($id);
+            if(!$materia) die("No se encontro una materia con la ID " . $id);
+            require __DIR__ . "/../views/edit.php";
+        }
 
         public function update() {
-            $id = isset($_POST["id"]) ? (int)$_POST["id"] : 0;
+            $id = isset($_POST["materia_id"]) ? (int)$_POST["materia_id"] : 0;
             $nombre= trim($_POST["nombre"] ?? "");
             $cuatrimestre = isset($_POST["cuatrimestre"]) ? (int)$_POST["cuatrimestre"] : 0;
             $anio = isset($_POST["anio"]) ? (int)$_POST["anio"] : 0;
@@ -60,7 +59,7 @@ require_once __DIR__ . "/../models/Materia.php";
         }
 
         public function delete() {
-            $id = isset($_POST["id"]) ? (int)$_POST["id"] : 0;
+            $id = isset($_GET["materia_id"]) ? (int)$_GET["materia_id"] : 0;
             if($id > 0) $this->materiaModel->deleteById($id);
             header("Location: index.php?action=index");
             exit;

@@ -1,5 +1,6 @@
 <h1>Editar materia</h1>
-<form action="index.php?action=store" method="POST">
+<form action="index.php?action=update" method="POST">
+    <input type="hidden" name="materia_id" value="<?= htmlspecialchars($materia["materia_id"]) ?>">
     <div>
         <label for="name">Nombre: </label>
         <input type="text" name="nombre" id="name" value="<?= htmlspecialchars($materia["nombre"]) ?>">
