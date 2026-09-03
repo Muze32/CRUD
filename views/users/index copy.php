@@ -1,3 +1,7 @@
+<?php 
+/** @var mysqli_result $materias */
+require __DIR__ . "/../layouts/header.php" 
+?>
 <h1>Lista de materias</h1>
 <p><a href="index.php?action=create">Agregar materia</a></p>
 
@@ -30,3 +34,4 @@
         <?php endwhile;?>
     </tbody>
 </table>
+<?php require __DIR__ . "/../layouts/footer.php" ?>

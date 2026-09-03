@@ -1,3 +1,4 @@
+<?php require __DIR__ . "/../layouts/header.php" ?>
 <h1>Agregar materia</h1>
 <form action="index.php?action=store" method="POST">
     <div>
@@ -22,3 +23,4 @@
     </div>
     <button type="submit">Confirmar</button>
 </form>
+<?php require __DIR__ . "/../layouts/footer.php" ?>

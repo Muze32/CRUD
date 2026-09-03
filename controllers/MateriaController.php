@@ -11,11 +11,11 @@ require_once __DIR__ . "/../models/Materia.php";
 
         public function index() {
             $materias = $this->materiaModel->getAll();
-            require __DIR__ . "/../views/index.php";
+            require __DIR__ . "/../views/users/index.php";
         }
 
         public function create() {
-            require __DIR__ . "/../views/create.php";
+            require __DIR__ . "/../views/users/create.php";
         }
 
         public function store() {
@@ -38,7 +38,7 @@ require_once __DIR__ . "/../models/Materia.php";
 
             $materia = $this->materiaModel->getById($id);
             if(!$materia) die("No se encontro una materia con la ID " . $id);
-            require __DIR__ . "/../views/edit.php";
+            require __DIR__ . "/../views/users/edit.php";
         }
 
         public function update() {

@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  margin: 0;
+  background-color: #1c1c1c;
+}
+
+button {
+    cursor: pointer;
+    color: black;
+}
+
+h1 {
+    color: #17c82a;
+}
+
+/*Nav section*/
+
+nav {
+    background-color: #2a3239;
+}
+
+.navLink {
+    padding: 1rem;
+    border: none;
+    background: none;
+    text-decoration: none;
+    flex: 1;
+}
+
+.navLink:hover {
+    background-color: #23272a;
+}
+
+/*Main section*/
+
+main {
+    margin: 2rem 10vw;
+    padding: 3rem 5rem;
+}
+
+h1, .flexContainer,.submitBtnDiv, .navLink {
+    display: flex;
+    justify-content: center;
+}
+
+.flexContainer {
+    gap: 4rem;
+}
+
+/*Skills section*/
+
+.skillCard {
+    border: solid 3px #17c82a;
+    border-radius: 4px;
+    padding: 1rem 3rem;
+}
+
+.skillCard > img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.skillCard > div {
+    display: flex;
+    justify-content: center;
+}
+
+/*Form Section*/
+
+label {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    color: black;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+.formSection {
+    margin-bottom: 2rem;
+}
