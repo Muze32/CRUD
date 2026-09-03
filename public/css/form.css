@@ -1,0 +1,25 @@
+/*Form Section*/
+
+label {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    color: black;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+.formSection {
+    margin-bottom: 2rem;
+}
+
+.formMateria {
+    
+}

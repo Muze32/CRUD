@@ -1,3 +1,16 @@
+:root {
+    --color-fondo: #0f1715;
+    --bg-card: #25312d;
+    --accent: #10b981;
+    --primary-text: #f0fdf4;
+    --secondary-text: #9ca3af;
+    --borders: #253830;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
   color: white;
@@ -5,7 +18,7 @@
 
 body {
   margin: 0;
-  background-color: #1c1c1c;
+  background-color: var(--color-fondo);
 }
 
 button {
@@ -14,49 +27,40 @@ button {
 }
 
 h1 {
-    color: #17c82a;
+    color: var(--texto-primario);
 }
 
-/*Nav section*/
-
-nav {
-    background-color: #2a3239;
-}
-
-.navLink {
-    padding: 1rem;
-    border: none;
-    background: none;
-    text-decoration: none;
-    flex: 1;
-}
-
-.navLink:hover {
-    background-color: #23272a;
+section {
+    height: 75vh;
 }
 
 /*Main section*/
 
 main {
-    margin: 2rem 10vw;
-    padding: 3rem 5rem;
+    margin: 0 auto;
+    max-width: 1300px;
 }
 
-h1, .flexContainer,.submitBtnDiv, .navLink, .center {
+h1, .flexContainer,.submitBtnDiv, .navLink, .center, .skillsContainer {
     display: flex;
     justify-content: center;
-}
-
-.flexContainer {
-    gap: 4rem;
-}
+}   
 
 /*Skills section*/
+
+.skillsContainer {
+    gap: 4rem;
+    flex-wrap: wrap;
+}
 
 .skillCard {
     border: solid 3px #17c82a;
     border-radius: 4px;
     padding: 1rem 3rem;
+}
+
+.skillCard:hover {
+    background-color: var(--bg-card);
 }
 
 .skillCard > img {
@@ -71,25 +75,17 @@ h1, .flexContainer,.submitBtnDiv, .navLink, .center {
     justify-content: center;
 }
 
-/*Form Section*/
-
-label {
-    display: inline-block;
-    margin-bottom: 1rem;
+/*Progress section*/
+table {
+    border-collapse: collapse;
 }
 
-input, textarea {
-    display: block;
-    width: 100%;
-    padding: 0.5rem;
-    color: black;
+th, td {
+    border: 2px solid white;
+    padding: 0.5rem 1rem;
 }
 
-section {
-    margin-bottom: 3rem;
-}
-
-.formSection {
-    margin-bottom: 2rem;
+td {
+    text-align: center;
 }
 

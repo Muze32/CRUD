@@ -4,7 +4,7 @@
 require __DIR__ . "/../layouts/header.php"
 ?>
 <h1>Editar materia</h1>
-<form action="index.php?action=update" method="POST">
+<form action="index.php?action=update" method="POST" class="formMateria">
     <input type="hidden" name="materia_id" value="<?= htmlspecialchars($materia["materia_id"]) ?>">
     <div>
         <label for="name">Nombre: </label>

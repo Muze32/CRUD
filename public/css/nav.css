@@ -1,0 +1,20 @@
+/*Nav section*/
+
+nav {
+    background-color: #2a3239;
+    position: sticky;
+    top: 0px;
+}
+
+.navLink {
+    padding: 1rem;
+    border: none;
+    background: none;
+    text-decoration: none;
+    flex: 1;
+}
+
+.navLink:hover {
+    background-color: #23272a;
+}
+

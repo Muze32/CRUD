@@ -1,0 +1,13 @@
+#sobreMi {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#sobreMi > div:last-child {
+    max-width: 500px;
+}
+
+.pfp {
+    width: 300px; 
+}

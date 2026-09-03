@@ -2,37 +2,55 @@
 require __DIR__ . "/../layouts/header.php" 
 ?>
     <main>
-        <section id="inicio">
-            <h1>Hola, mi nombre es NOMBRE Desarrollador Full Stack</h1>
-        </section>
-
         <section id="sobreMi">
-            <h1>Sobre mi</h1>
-            <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quasi optio corrupti debitis iure esse non, tenetur temporibus quo. Id, illo nisi quisquam quo nihil maiores distinctio alias deserunt obcaecati?</div>
+            <div>
+                <img src="img/pfp.jpg" alt="Profile picture" class="pfp">
+            </div>
+
+            <div>
+                <h1>Sobre mi</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, suscipit quia esse in aut natus dolore iure amet aspernatur vero delectus necessitatibus ratione ut itaque laboriosam sapiente minus consectetur dignissimos.</p>
+            </div>
         </section>
 
         <section id="habilidades">
             <h1>Habilidades</h1>
-            <div class="flexContainer">
+            <div class="skillsContainer">
                 <div class="skillCard">
-                    <img src="icons/java.webp" alt="">
+                    <img src="img/logos/java.webp" alt="Java logo">
                     <div>Java</div>
                 </div>
                 <div class="skillCard">
-                    <img src="icons/C_Logo.png" alt="">
+                    <img src="img/logos/C_Logo.png" alt="C logo">
                     <div>C</div>
                 </div>                
                 <div class="skillCard">
-                    <img src="icons/python.webp" alt="">
+                    <img src="img/logos/python.webp" alt="Python logo">
                     <div>Python</div>
                 </div>                
                 <div class="skillCard">
-                    <img src="icons/postgreSQL.webp" alt="">
+                    <img src="img/logos/postgreSQL.webp" alt="PostgreSQL logo">
                     <div>PostgreSQL</div>
                 </div>                
                 <div class="skillCard">
-                    <img src="icons/flutter.png" alt="">
+                    <img src="img/logos/flutter.png" alt="Flutter logo">
                     <div>Flutter</div>
+                </div>                
+                <div class="skillCard">
+                    <img src="img/logos/html.webp" alt="HTML logo">
+                    <div>HTML</div>
+                </div>                
+                <div class="skillCard">
+                    <img src="img/logos/css.webp" alt="CSS logo">
+                    <div>CSS</div>
+                </div>                
+                <div class="skillCard">
+                    <img src="img/logos/js.webp" alt="JavaScript logo">
+                    <div>JavaScript</div>
+                </div>                
+                <div class="skillCard">
+                    <img src="img/logos/c_sharp.png" alt="CSharp logo">
+                    <div>C#</div>
                 </div>                
 
             </div>
@@ -47,35 +65,7 @@ require __DIR__ . "/../layouts/header.php"
         </section>
 
         <?php require __DIR__ . "/progreso.php" ?>
-
-        <section id="contacto">
-            <h1>Contacto</h1>
-            <form action="">
-                <div class="formSection">
-                    <label>Nombre:</label>
-                    <input type="text" placeholder="Ingrese su nombre">
-                </div>
-                <div class="formSection">
-                    <label>Correo Electrónico:</label>
-                    <input type="email" placeholder="Ingrese su correo electrónico">
-                </div>
-                <div class="formSection">
-                    <label>Teléfono:</label>
-                    <input type="tel" placeholder="Ingrese su telefono">
-                </div>
-                <div class="formSection">
-                    <label>Asunto:</label>
-                    <input type="text" placeholder="Ingrese el asunto del correo">
-                </div>
-                <div class="formSection">
-                    <label>Mensaje:</label>
-                    <textarea name="" id="" placeholder="Ingrese el contenido del mensaje" rows="8"></textarea>
-                </div>
-                <div class="submitBtnDiv">
-                    <button type="submit" id="submitBtn">Enviar mensaje</button>
-                </div>
-            </form>
-        </section>
+        <?php require __DIR__ . "/contacto.php" ?>
     </main>
 
 <?php require __DIR__ . "/../layouts/footer.php" ?>
