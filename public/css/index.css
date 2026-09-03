@@ -42,7 +42,7 @@ main {
     padding: 3rem 5rem;
 }
 
-h1, .flexContainer,.submitBtnDiv, .navLink {
+h1, .flexContainer,.submitBtnDiv, .navLink, .center {
     display: flex;
     justify-content: center;
 }
@@ -92,3 +92,4 @@ section {
 .formSection {
     margin-bottom: 2rem;
 }
+

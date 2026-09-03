@@ -21,17 +21,17 @@ class Materia
         return $s->get_result()->fetch_assoc();
     }
 
-    public function update($id, $nombre, $anio, $cuatrimestre, $regularizada, $finalizada)
+    public function update($id, $nombre, $anio, $cuatrimestre, $estado)
     {
-        $s = $this->conexion->prepare("UPDATE materias SET nombre = ?, anio = ?, cuatrimestre = ?, regularizada = ?, finalizada = ? WHERE materia_id = ?");
-        $s->bind_param("siiiii", $nombre, $anio, $cuatrimestre, $regularizada, $finalizada, $id);
+        $s = $this->conexion->prepare("UPDATE materias SET nombre = ?, anio = ?, cuatrimestre = ?, estado = ? WHERE materia_id = ?");
+        $s->bind_param("sissi", $nombre, $anio, $cuatrimestre, $estado, $id);
         return $s->execute();
     }
 
-    public function create($nombre, $anio, $cuatrimestre, $regularizada, $finalizada)
+    public function create($nombre, $anio, $cuatrimestre, $estado)
     {
-        $s = $this->conexion->prepare("INSERT INTO materias (nombre, anio, cuatrimestre, regularizada, finalizada) VALUES(?, ? ,?, ?, ?)");
-        $s->bind_param("siiii", $nombre, $anio, $cuatrimestre, $regularizada, $finalizada);
+        $s = $this->conexion->prepare("INSERT INTO materias (nombre, anio, cuatrimestre, estado) VALUES(?, ? ,?, ?)");
+        $s->bind_param("siss", $nombre, $anio, $cuatrimestre, $estado);
         return $s->execute();
     }
 

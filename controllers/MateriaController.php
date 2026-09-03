@@ -21,14 +21,14 @@ require_once __DIR__ . "/../models/Materia.php";
         public function store() {
             $nombre = trim($_POST["nombre"] ?? "");
             $anio = isset($_POST["anio"]) ? (int)$_POST["anio"] : 0;
-            $cuatrimestre = isset($_POST["anio"]) ? (int)$_POST["anio"] : 0;
-            $regularizada = isset($_POST["regularizada"]) ? 1 : 0;
-            $finalizada = isset($_POST["finalizada"]) ? 1 : 0;
+            $cuatrimestre = trim($_POST["cuatrimestre"] ?? "");
+            $estado = trim($_POST["estado"] ?? "");
 
             if($nombre === "") die("Ingrese un nombre para la materia");
-            if($anio <= 0 || $cuatrimestre <= 0) die("Ingrese un año o cuatrimestres validos");
+            if($anio <= 0 || $cuatrimestre === "") die("Ingrese un año o cuatrimestres validos");
+            if($estado === "") die("Ingrese el estado de la materia");
 
-            $this->materiaModel->create($nombre, $anio, $cuatrimestre, $regularizada, $finalizada);
+            $this->materiaModel->create($nombre, $anio, $cuatrimestre, $estado);
             header("Location: index.php?action=index");
             exit;
         }
@@ -44,16 +44,16 @@ require_once __DIR__ . "/../models/Materia.php";
         public function update() {
             $id = isset($_POST["materia_id"]) ? (int)$_POST["materia_id"] : 0;
             $nombre= trim($_POST["nombre"] ?? "");
-            $cuatrimestre = isset($_POST["cuatrimestre"]) ? (int)$_POST["cuatrimestre"] : 0;
+            $cuatrimestre = trim($_POST["cuatrimestre"] ?? "");
             $anio = isset($_POST["anio"]) ? (int)$_POST["anio"] : 0;
-            $regularizada = isset($_POST["regularizada"]) ? (int)$_POST["regularizada"] : 0;
-            $finalizada = isset($_POST["finalizada"]) ? (int)$_POST["finalizada"] : 0;
+            $estado = trim($_POST["estado"] ?? "");
 
             if($id <= 0) die("ID no valida");
             if($nombre === "") die("Ingrese un nombre para la materia");
-            if($anio <= 0 || $cuatrimestre <= 0) die("Ingrese un año o cuatrimestres validos");
+            if($anio <= 0 || $cuatrimestre === "") die("Ingrese un año o cuatrimestres validos");
+            if($estado === "") die("Ingrese el estado de la materia");
 
-            $this->materiaModel->update($id, $nombre, $cuatrimestre, $anio, $regularizada, $finalizada);
+            $this->materiaModel->update($id, $nombre, $anio, $cuatrimestre, $estado);
             header("Location: index.php?action=index");
             exit;
         }
