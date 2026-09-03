@@ -1,10 +1,10 @@
 :root {
     --color-fondo: #0f1715;
-    --bg-card: #25312d;
-    --accent: #10b981;
+    --bg-card: #2f3130;
+    --accent: #109a6c;
     --primary-text: #f0fdf4;
     --secondary-text: #9ca3af;
-    --borders: #253830;
+    --borders: #588371;
 }
 
 html {
@@ -27,18 +27,18 @@ button {
 }
 
 h1 {
-    color: var(--texto-primario);
+    color: var(--primary-text);
 }
 
 section {
-    height: 75vh;
+    min-height: 75vh;
 }
 
 /*Main section*/
 
 main {
     margin: 0 auto;
-    max-width: 1300px;
+    max-width: 1200px;
 }
 
 h1, .flexContainer, .navLink, .center, .skillsContainer {
@@ -54,7 +54,10 @@ h1, .flexContainer, .navLink, .center, .skillsContainer {
 }
 
 .skillCard {
-    border: solid 3px #17c82a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 3px var(--borders);
     border-radius: 4px;
     padding: 1rem 3rem;
 }
@@ -75,17 +78,29 @@ h1, .flexContainer, .navLink, .center, .skillsContainer {
     justify-content: center;
 }
 
-/*Progress section*/
-table {
-    border-collapse: collapse;
+/*Seccion de proyectos*/
+
+.projectsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
-th, td {
-    border: 2px solid white;
-    padding: 0.5rem 1rem;
+.projectCard {
+    width: min-content;
+    background-color: var(--bg-card);
+    border: 1px solid var(--borders);
+    border-radius: 12px;
 }
 
-td {
+.projectCard > h2 {
     text-align: center;
 }
 
+.projectImg {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    display: block;
+    background-color: white;
+}

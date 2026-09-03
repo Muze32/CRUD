@@ -1,7 +1,7 @@
 /*Nav section*/
 
 nav {
-    background-color: #2a3239;
+    background-color: var(--accent);
     position: sticky;
     top: 0px;
 }
@@ -15,6 +15,5 @@ nav {
 }
 
 .navLink:hover {
-    background-color: #23272a;
+    background-color: #148560;
 }
-

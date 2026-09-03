@@ -60,7 +60,19 @@ require __DIR__ . "/../layouts/header.php"
             <h1>
                 Mis Proyectos
             </h1>
-            <div>
+            <div class="projectsContainer">
+                <div class="projectCard">
+                    <img src="img/proyects/videogame.png" alt="Portada de mi videojuego" alt="" class="projectImg">
+                    <h2>One-Through-Five</h2>
+                </div>
+                <div class="projectCard">
+                    <img src="img/proyects/videogame.png" alt="Portada de mi videojuego" class="projectImg">
+                    <h2>Videojuego</h2>
+                </div>
+                <div class="projectCard">
+                    <img src="img/proyects/battleship.png" alt="Version Web del videojuego battleship" class="projectImg">
+                    <h2>Battleship</h2>
+                </div>
             </div>
         </section>
 

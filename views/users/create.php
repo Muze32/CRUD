@@ -52,7 +52,7 @@
         </label>
     </div>
     <div class="center">
-        <button type="submit">Confirmar</button>
+        <button type="submit" class="submitBtn">Confirmar</button>
     </div>
 </form>
 

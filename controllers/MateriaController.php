@@ -29,7 +29,7 @@ require_once __DIR__ . "/../models/Materia.php";
             if($estado === "") die("Ingrese el estado de la materia");
 
             $this->materiaModel->create($nombre, $anio, $cuatrimestre, $estado);
-            header("Location: index.php?action=index");
+            header("Location: index.php?action=index#progreso");
             exit;
         }
         public function edit() {
@@ -54,14 +54,14 @@ require_once __DIR__ . "/../models/Materia.php";
             if($estado === "") die("Ingrese el estado de la materia");
 
             $this->materiaModel->update($id, $nombre, $anio, $cuatrimestre, $estado);
-            header("Location: index.php?action=index");
+            header("Location: index.php?action=index#progreso");
             exit;
         }
 
         public function delete() {
             $id = isset($_GET["materia_id"]) ? (int)$_GET["materia_id"] : 0;
             if($id > 0) $this->materiaModel->deleteById($id);
-            header("Location: index.php?action=index");
+            header("Location: index.php?action=index#progreso");
             exit;
         }
     }

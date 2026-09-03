@@ -22,7 +22,7 @@
             <textarea name="" id="" class="textInput"  placeholder="Ingrese el contenido del mensaje" rows="8"></textarea>
         </div>
         <div class="center">
-            <button type="submit" id="submitBtn">Enviar mensaje</button>
+            <button type="submit" class="submitBtn">Enviar mensaje</button>
         </div>
     </form>
 </section>
