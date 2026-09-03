@@ -31,9 +31,9 @@ require __DIR__ . "/../layouts/header.php"
         <label>Cuatrimestre: </label>
         <div>
             <label>
+                <input type="radio" name="cuatrimestre" value="1" <?= ($materia['cuatrimestre'] === '1') ? 'checked' : '' ?> required>
                 1° cuatrimestre
             </label>
-            <input type="radio" name="cuatrimestre" value="1" <?= ($materia['cuatrimestre'] === '1') ? 'checked' : '' ?> required>
             <label>
                 <input type="radio" name="cuatrimestre" value="2" <?= ($materia['cuatrimestre'] === '2') ? 'checked' : '' ?>>
                 2° cuatrimestre

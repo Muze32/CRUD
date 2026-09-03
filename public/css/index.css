@@ -51,6 +51,8 @@ h1, .flexContainer, .navLink, .center, .skillsContainer {
 .skillsContainer {
     gap: 4rem;
     flex-wrap: wrap;
+    align-items: center;
+    flex-grow: 1;
 }
 
 .skillCard {

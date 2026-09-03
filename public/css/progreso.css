@@ -1,11 +1,11 @@
 /*Progress section*/
 
-#progreso {
+#progreso, #habilidades {
     display: flex;
     flex-direction: column;
 }
 
-.tableContainer {
+.centeredContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,6 +16,7 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
     background-color: var(--bg-card);
+    margin-bottom: 2rem;
 }
 
 th, td {
