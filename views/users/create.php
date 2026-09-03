@@ -1,12 +1,12 @@
 <?php require __DIR__ . "/../layouts/header.php" ?>
 <h1>Agregar materia</h1>
 
-<form action="index.php?action=store" method="POST">
-    <div>
+<form action="index.php?action=store" method="POST" class="formMateria">
+    <div class="formRow">
         <label for="name">Nombre: </label>
-        <input type="text" name="nombre" id="name">
+        <input type="text" name="nombre" id="name" class="textInput">
     </div>
-    <div>
+    <div class="formRow">
         <label>Año: </label>
         <label>
             <input type="radio" name="anio" value="1" checked required>
@@ -21,7 +21,7 @@
             Tercer año
         </label>
     </div>
-    <div>
+    <div class="formRow">
         <label>Cuatrimestre: </label>
         <label>
             <input type="radio" name="cuatrimestre" value="1" checked required>
@@ -36,7 +36,7 @@
             Anual
         </label>
     </div>
-    <div>
+    <div class="formRow">
         <label>Estado: </label>
         <label>
             <input type="radio" name="estado" value="Pendiente" checked required>
@@ -51,8 +51,9 @@
             Finalizada
         </label>
     </div>
-
-    <button type="submit">Confirmar</button>
+    <div class="center">
+        <button type="submit">Confirmar</button>
+    </div>
 </form>
 
 <?php require __DIR__ . "/../layouts/footer.php" ?>

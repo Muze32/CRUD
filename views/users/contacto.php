@@ -3,25 +3,25 @@
     <form action="">
         <div class="formSection">
             <label>Nombre:</label>
-            <input type="text" placeholder="Ingrese su nombre">
+            <input type="text" placeholder="Ingrese su nombre" class="textInput">
         </div>
         <div class="formSection">
             <label>Correo Electrónico:</label>
-            <input type="email" placeholder="Ingrese su correo electrónico">
+            <input type="email" placeholder="Ingrese su correo electrónico" class="textInput">
         </div>
         <div class="formSection">
             <label>Teléfono:</label>
-            <input type="tel" placeholder="Ingrese su telefono">
+            <input type="tel" placeholder="Ingrese su telefono" class="textInput">
         </div>
         <div class="formSection">
             <label>Asunto:</label>
-            <input type="text" placeholder="Ingrese el asunto del correo">
+            <input type="text" placeholder="Ingrese el asunto del correo" class="textInput">
         </div>
         <div class="formSection">
             <label>Mensaje:</label>
-            <textarea name="" id="" placeholder="Ingrese el contenido del mensaje" rows="8"></textarea>
+            <textarea name="" id="" class="textInput"  placeholder="Ingrese el contenido del mensaje" rows="8"></textarea>
         </div>
-        <div class="submitBtnDiv">
+        <div class="center">
             <button type="submit" id="submitBtn">Enviar mensaje</button>
         </div>
     </form>

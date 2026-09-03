@@ -5,7 +5,7 @@ label {
     margin-bottom: 1rem;
 }
 
-input, textarea {
+.textInput {
     display: block;
     width: 100%;
     padding: 0.5rem;
@@ -21,5 +21,17 @@ section {
 }
 
 .formMateria {
-    
+    margin: 0 auto;
+    max-width: 60vw;
+    background-color: #313635;
+    padding: 3rem;
+    border-radius: 16px;
+}
+
+.formRow {
+    margin-bottom: 2rem;
+}
+
+.submitBtn {
+    padding: 0.6rem 1.2rem;
 }

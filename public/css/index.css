@@ -41,7 +41,7 @@ main {
     max-width: 1300px;
 }
 
-h1, .flexContainer,.submitBtnDiv, .navLink, .center, .skillsContainer {
+h1, .flexContainer, .navLink, .center, .skillsContainer {
     display: flex;
     justify-content: center;
 }   
