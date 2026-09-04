@@ -16,5 +16,4 @@
         <a class="navLink" href="#habilidades">Habilidades</a>
         <a class="navLink" href="#proyectos">Proyectos</a>
         <a class="navLink" href="#progreso">Progreso</a>
-        <a class="navLink" href="#contacto">Contacto</a>
     </nav>

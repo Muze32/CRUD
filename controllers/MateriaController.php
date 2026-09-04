@@ -32,6 +32,7 @@ require_once __DIR__ . "/../models/Materia.php";
             header("Location: index.php?action=index#progreso");
             exit;
         }
+        
         public function edit() {
             $id = isset($_GET["materia_id"]) ? (int)$_GET["materia_id"] : 0;
             if($id <= 0) die("Ingrese un ID valido");

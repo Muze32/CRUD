@@ -94,14 +94,13 @@ require __DIR__ . "/../layouts/header.php"
                     <div class="projectContent">
                         <h2>Battleship</h2>
                         <p>Juego de Batalla Naval con lógica orientada a objetos y representación gráfica.</p>
-                        <a href="#" class="btnProject">Ver Proyecto</a>
+                        <a href="https://github.com/Muze32/Battleship" class="btnProject">Ver Proyecto</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <?php require __DIR__ . "/progreso.php" ?>
-        <?php require __DIR__ . "/contacto.php" ?>
     </main>
 
 <?php require __DIR__ . "/../layouts/footer.php" ?>

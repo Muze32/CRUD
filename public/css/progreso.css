@@ -61,6 +61,7 @@ td {
 
 .delete {
     background-color: #dc3a3a;
+    border-radius: 8px;
 }
 
 .delete:hover {
