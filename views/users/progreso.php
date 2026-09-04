@@ -27,7 +27,7 @@
                         <td class="estado-<?= htmlspecialchars($materia["estado"]) ?>"><?= htmlspecialchars($materia["estado"]) ?></td>
                         <td>
                             <a class="actionBtn edit" href="index.php?action=edit&materia_id=<?= $materia["materia_id"] ?>">Editar</a>
-                            <a class="actionBtn delete" href="index.php?action=delete&materia_id=<?= $materia["materia_id"] ?>" onclick="return confirm('¿Eliminar este usuario?')">Eliminar</a>
+                            <a class="actionBtn delete" href="index.php?action=delete&materia_id=<?= $materia["materia_id"] ?>" onclick="return confirm('¿Eliminar esta materia?')">Eliminar</a>
                         </td>
                     </tr>
                 <?php endwhile; ?>
