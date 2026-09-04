@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/projects.css">
     <link rel="stylesheet" href="css/progreso.css">
 </head>
 <body>

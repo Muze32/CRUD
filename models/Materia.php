@@ -10,12 +10,12 @@ class Materia
 
     public function getAll()
     {
-        return $this->conexion->query("SELECT * FROM materias ORDER BY materia_id DESC");
+        return $this->conexion->query("SELECT * FROM materias WHERE oculta = FALSE ORDER BY materia_id DESC");
     }
 
     public function getById($id)
     {
-        $s = $this->conexion->prepare("SELECT * FROM materias WHERE materia_id = ?");
+        $s = $this->conexion->prepare("SELECT * FROM materias WHERE materia_id = ? AND oculta = FALSE");
         $s->bind_param("i", $id);
         $s->execute();
         return $s->get_result()->fetch_assoc();
@@ -37,7 +37,7 @@ class Materia
 
     public function deleteById($id)
     {
-        $s = $this->conexion->prepare("DELETE FROM materias where materia_id = ?");
+        $s = $this->conexion->prepare("UPDATE materias SET oculta = TRUE WHERE materia_id = ?");
         $s->bind_param("i", $id);
         return $s->execute();
     }
